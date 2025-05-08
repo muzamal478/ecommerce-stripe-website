@@ -96,4 +96,4 @@ Contributions are welcome. Please follow these steps:
 This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
-For questions or support, contact Muzamal Asghar at [your-email@example.com] or open an issue on this repository.
+For questions or support, contact Muzamal Asghar at [muzamalasghar47@gmail.com] or open an issue on this repository.
