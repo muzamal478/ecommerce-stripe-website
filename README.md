@@ -1,5 +1,13 @@
 # E-Commerce Website with Stripe Payment Integration
 
+![](images/index.jpeg)
+
+![](images/product.jpeg)
+
+![](images/cart.jpeg)
+
+![](images/checkout.jpeg)
+
 ## Project Overview
 This repository contains a fully functional e-commerce website designed to showcase products, manage a shopping cart, and process payments securely using Stripe. Built with HTML, CSS, JavaScript, and Bootstrap, the website features a responsive layout, smooth animations, and a user-friendly interface.
 
