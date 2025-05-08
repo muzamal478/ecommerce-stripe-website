@@ -1,93 +1,99 @@
 # E-Commerce Website with Stripe Payment Integration
 
-## Description
-This is a fully responsive e-commerce website built with HTML, CSS, JavaScript, and Bootstrap, featuring secure payment processing using Stripe. The project includes a homepage with product listings, a product details page, a cart system, and a checkout page with Stripe integration for seamless transactions.
+## Project Overview
+This repository contains a fully functional e-commerce website designed to showcase products, manage a shopping cart, and process payments securely using Stripe. Built with HTML, CSS, JavaScript, and Bootstrap, the website features a responsive layout, smooth animations, and a user-friendly interface.
 
 ## Features
-- Responsive design optimized for mobile and desktop devices.
-- Product listing and detailed product pages.
-- Cart functionality with add/remove items and total calculation.
-- Secure payment processing with Stripe using environment variables.
-- Smooth animations and transitions for an enhanced user experience.
-- Clean and modular code structure for maintainability.
+- **Product Listing**: Browse and view product details with images and prices.
+- **Cart Management**: Add, remove, and view items in the cart with a calculated total.
+- **Stripe Payment Integration**: Secure checkout process using Stripe’s API.
+- **Responsive Design**: Optimized for desktops, tablets, and mobile devices.
+- **Animations**: Enhanced user experience with hover effects and transitions.
 
-## Installation
-Follow these steps to set up the project locally:
+## Technologies Used
+- **HTML5**: Structural foundation of the website.
+- **CSS3**: Custom styling with animations and responsiveness.
+- **JavaScript**: Dynamic functionality for cart and payment processing.
+- **Bootstrap 5**: Framework for consistent and responsive design.
+- **Stripe API**: Secure payment gateway integration.
+- **Node.js**: Server-side support for Stripe transactions.
 
+## Installation and Setup
+Follow these steps to run the project locally:
+
+### Prerequisites
+- [Node.js](https://nodejs.org) installed.
+- A [Stripe](https://stripe.com) account with test API keys.
+- Git installed.
+
+### Steps
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/muzamal478/ecommerce-stripe-website.git
    cd ecommerce-stripe-website
    ```
 
-2. **Install Node.js**:
-   - Download and install Node.js from [nodejs.org](https://nodejs.org).
-
-3. **Install Dependencies**:
+2. **Install Dependencies**:
    ```bash
    npm install
    ```
 
+3. **Configure Stripe Keys**:
+   - Open `js/stripe.js` and replace `pk_test_your_publishable_key` with your Stripe Publishable Key.
+   - Open `server.js` and replace `sk_test_your_secret_key` with your Stripe Secret Key.
+
 4. **Add Product Image**:
-   - Place a product image in the `images/` folder named `product.jpg`, or update the `products` array in `js/script.js` with a valid image URL.
+   - Place a product image in the `images/` folder (e.g., `product.jpg`) or update the `products` array in `js/script.js` with a valid image URL.
 
-5. **Set Up Environment Variables**:
-   - Create a `.env` file in the project root.
-   - Add your Stripe Secret Key:
-     ```plaintext
-     STRIPE_SECRET_KEY=your-secret-key
-     ```
-   - Obtain the key from the Stripe Dashboard (test mode).
-
-## Usage
-1. **Run the Server**:
+5. **Run the Server**:
    ```bash
-   npm start
+   node server.js
    ```
    - Open your browser and navigate to `http://localhost:3000`.
 
-2. **Test the Website**:
-   - Browse products on the homepage.
-   - Click a product to view details and add it to the cart.
-   - View the cart, proceed to checkout, and complete a test payment.
-
-## Stripe Setup
-1. **Create a Stripe Account**:
-   - Sign up at [stripe.com](https://stripe.com) and enable test mode.
-   - Obtain your **Publishable Key** and **Secret Key** from the Stripe Dashboard.
-
-2. **Configure Stripe Keys**:
-   - In `js/stripe.js`, replace `pk_test_your_publishable_key` with your Publishable Key.
-   - In `.env`, set `STRIPE_SECRET_KEY` to your Secret Key.
-
-3. **Test Payments**:
+6. **Test Payment**:
+   - Add products to the cart and proceed to checkout.
    - Use Stripe’s test card: `4242 4242 4242 4242`, any future date, and any 3-digit CVC.
-   - Verify payments in the Stripe Dashboard under “Payments”.
+   - Verify payments in the [Stripe Dashboard](https://dashboard.stripe.com/test/payments).
 
-## Technologies Used
-- **Frontend**: HTML, CSS, JavaScript, Bootstrap 5
-- **Backend**: Node.js, Express
-- **Payment**: Stripe API
-- **Environment**: dotenv
-- **Version Control**: Git, GitHub
+## File Structure
+```
+ECCOMMERCE-WEBSITE/
+├── css/
+│   └── styles.css          # Custom CSS for styling and animations
+├── images/                 # Directory for product images
+├── js/
+│   ├── script.js           # JavaScript for cart and UI logic
+│   └── stripe.js           # JavaScript for Stripe payment integration
+├── node_modules/           # Node.js dependencies
+├── .gitignore              # Files to exclude from Git
+├── .env                    # Environment variables (if used)
+├── cart.html               # Cart page
+├── checkout.html           # Checkout page with Stripe integration
+├── index.html              # Homepage with product listing
+├── LICENSE                 # Project license
+├── package-lock.json       # Lock file for dependencies
+├── package.json            # Node.js package configuration
+├── product.html            # Product details page
+├── README.md               # Project documentation
+└── server.js               # Node.js server for Stripe API
+```
 
-## Screenshots
-*(Optional: Add screenshots for visual appeal)*  
-To add screenshots:
-1. Create an `assets/images` folder in the repository.
-2. Upload screenshots (e.g., `homepage.png`, `checkout.png`).
-3. Embed in the README:
-   ```markdown
-   ![Homepage](assets/images/homepage.png)
-   ```
+## Usage
+- **Browse Products**: Explore the homepage to view available products.
+- **Add to Cart**: Select items and manage them in the cart.
+- **Checkout**: Complete purchases securely via Stripe.
+
+## Contributing
+Contributions are welcome. Please follow these steps:
+1. Fork the repository.
+2. Create a branch: `git checkout -b feature-name`.
+3. Commit changes: `git commit -m "Add feature"`.
+4. Push to your fork: `git push origin feature-name`.
+5. Submit a pull request.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
-For questions or feedback, contact:
-- **GitHub**: [muzamal478](https://github.com/muzamal478)
-- **Email**: your-email@example.com
-
----
-*This project was created as a portfolio piece to demonstrate e-commerce and payment integration skills.*
+For questions or support, contact Muzamal Asghar at [your-email@example.com] or open an issue on this repository.
